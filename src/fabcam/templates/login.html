@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<!-- Author: Kenichi Ohwada -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FabCam</title>
+</head>
+<body>
+<h3>Welcome to FabCam</h3>
+<h1>Login</h1>
+<form action="/login" method="post">
+    {% module xsrf_form_html() %}
+    <p>username : <input type="text" name="username"/></p>
+    <p>password : <input type="password" name="password"/></p>
+    <input type="submit" value="Login"/>
+</form>
+</body>
+</html>
