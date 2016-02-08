@@ -13,7 +13,7 @@ $ cd FabCam <br>
 $ sudo python setup.py install <br>
 
 you can use service deamon <br>
-$ sudo init.sh <br>
+$ sudo ./init.sh <br>
 
 ### Run
 $ /usr/local/bin/fabcam <br>
