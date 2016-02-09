@@ -17,7 +17,7 @@ default username is "fablab", password is "fablab" <br>
 
 ### Setup
 (1) Setup serial setting <br>
-If Serial Port is empty, connect the machine with USB cable, and refresh web brawser.
+If Serial Port is empty, connect the machine with USB cable, and refresh web brawser. <br>
 (2) Upload G-code file <br>
 (3) Push ”Excute" botton <br>
 
