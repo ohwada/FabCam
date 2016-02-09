@@ -13,7 +13,7 @@ You can use hostname such as "fabcam.local" as IP_ADDR, if the app is running wi
 Please enter username and password <br>
 default username is "fablab", password is "fablab" <br>
 
-<img src="https://raw.githubusercontent.com/ohwada/FabCam/master/docs/fabcam_login.png" width="200" border="1" />
+<img src="https://raw.githubusercontent.com/ohwada/FabCam/master/docs/fabcam_login.png" width="300" />
 
 ### Setup
 (1) Setup serial setting <br>
@@ -21,14 +21,14 @@ If Serial Port is empty, connect the machine with USB cable, and refresh web bra
 (2) Upload G-code file <br>
 (3) Push ”Excute" botton <br>
 
-<img src="https://raw.githubusercontent.com/ohwada/FabCam/master/docs/fabcam_main.png" width="200" border="1" />
+<img src="https://raw.githubusercontent.com/ohwada/FabCam/master/docs/fabcam_main.png" width="300"/>
 
 ### Excute
 Usually display immediately "END", and the machine will be run. <br>
 If it is taking time to transfer data to the machine, display consecutive dots such as "..." <br>
 If the transfer fails, display the reason <br>
 
-<img src="https://raw.githubusercontent.com/ohwada/FabCam/master/docs/fabcam_excute.png" width="200" border="1" />
+<img src="https://raw.githubusercontent.com/ohwada/FabCam/master/docs/fabcam_excute.png" width="300"  />
 
 ### Notice
 This app does not have the generation function of G-code. <br>
