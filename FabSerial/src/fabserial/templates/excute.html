@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<!-- Author: Kenichi Ohwada -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FabSerial</title>
+<style>
+#error {
+    color: #ff0000;
+}
+</style>
+<script src="/static/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+var timer_id;
+var count = 0;
+$(function() {
+    update();
+    timer_id = setInterval("update()",1000);
+});
+function update(){
+    $.ajax({
+        url: '/status',
+        type: 'GET',
+        cache : false
+    })
+    .done(function(data) {
+        var obj = JSON.parse(data);
+        var ele_msg = $('#msg');
+        var ele_error = $('#error');
+        if ( obj != null ) {
+            if ( obj.status == 1 ) {
+                // running
+                ele_msg.append(".");
+                count ++;
+                if ( count > 100 ) {
+                    count = 0;
+                    ele_msg.append("<br/>\n");
+                }
+            } else if ( obj.status == 2 ) {
+                // end
+                clearInterval(timer_id);
+                ele_msg.text("=== End ===");
+                ele_msg.css("font-weight", "bold")
+            } else if ( obj.status == 3 ) {
+                // error
+                clearInterval(timer_id);
+                ele_error.text(obj.error);
+            } else {
+                // others
+                ele_error.text("Error: status:" + obj.status);
+            }
+        } else {
+            ele_error.text("Error: response is null");
+        }
+    });
+}
+</script>
+</head>
+<body>
+<a href="/">[Main]</a> <a href=/logout>[Logout]</a><br>
+<h3>Send to Machine via serial port</h3>
+port: {{ port }} <br/>
+baudrate: {{ baudrate }} <br/>
+filename: {{ filename }} <br/>
+<div id="msg"></div>
+<div id="error"></div>
+</html>

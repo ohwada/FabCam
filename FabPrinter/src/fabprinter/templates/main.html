@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<!-- Author: Kenichi Ohwada -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FabPrinter</title>
+</head>
+<body>
+<a href=/logout>[Logout]</a><br>
+<h1>FabCam Printer</h1>
+
+<h3>Printer Setting</h3>
+<form action="/printer_setting" method="post">
+    {% module xsrf_form_html() %}
+    <label>Printer Name</label>
+    <input type="text" name="printer" value="{{ printer }}">
+    <input type="submit" value="Set"/>
+</form>
+
+<h3>File Upload</h3>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    {% module xsrf_form_html() %}
+    <label>File</label>
+    <input type="file" name="file" size="30">
+    <br/>
+    <input type="submit" value="Upload"/>
+</form>
+
+<h3>Send to Machine</h3>
+<form action="/excute" method="post">
+    {% module xsrf_form_html() %}
+    <table>
+        <tr><td>Printer</td>
+        <td>{{ printer }}</td></tr>
+        <tr><td>File Select</td>
+        <td>
+        <select name="filename">
+            {% for filename in filenames %}
+                {% if filename == filename_selected %}                
+                    <option value="{{ filename }}" selected="selected">{{ filename }}</option>
+                {% else %}  
+                    <option value="{{ filename }}">{{ filename }}</option>
+                {% end %}
+            {% end %}
+        </select>
+        </td></tr>
+        <tr><td colspan="2">
+        <input type="submit" value="Send"/>
+        </td></tr>
+    </table>
+</form>
+</body>
+</html>

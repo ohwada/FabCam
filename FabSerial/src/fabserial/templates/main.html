@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<!-- Author: Kenichi Ohwada -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FabSerial</title>
+</head>
+<body>
+<a href=/logout>[Logout]</a><br>
+<h1>FabCam Serial</h1>
+
+<h3>Serial Setting</h3>
+<form action="/serial_setting" method="post">
+    {% module xsrf_form_html() %}
+    <label>Serial Port</label>
+    <select name="port">
+        {% for port in ports %}
+            {% if port == port_selected %}
+                <option value="{{ port }}" selected="selected">{{ port }}</option>               
+            {% else %}  
+                <option value="{{ port }}">{{ port }}</option>
+            {% end %}
+        {% end %}
+    </select><br/>
+    <label>Baudrate</label>
+    <select name="baudrate">
+        {% for baudrate in baudrates %}
+            {% if baudrate == baudrate_selected %}                
+                <option value="{{ baudrate }}" selected="selected">{{ baudrate }}</option>
+            {% else %}  
+                <option value="{{ baudrate }}">{{ baudrate }}</option>
+            {% end %}  
+        {% end %}
+    </select><br/>
+    <input type="submit" value="Set"/>
+</form>
+
+<h3>File Upload</h3>
+<form action="/upload" method="post" enctype="multipart/form-data">
+    {% module xsrf_form_html() %}
+    <label>File</label>
+    <input type="file" name="file" size="30">
+    <br/>
+    <input type="submit" value="Upload"/>
+</form>
+
+<h3>Send to Machine</h3>
+<form action="/excute" method="post">
+    {% module xsrf_form_html() %}
+    <table>
+        <tr><td>Port</td>
+        <td>{{ port_selected }} </td></tr>
+        <tr><td>Baudrate</td>
+        <td>{{ baudrate_selected }} </td></tr>
+        <tr><td>File Select</td>
+        <td>
+        <select name="filename">
+            {% for filename in filenames %}
+                {% if filename == filename_selected %}                
+                    <option value="{{ filename }}" selected="selected">{{ filename }}</option>
+                {% else %}  
+                    <option value="{{ filename }}">{{ filename }}</option>
+                {% end %}
+            {% end %}
+        </select>
+        </td></tr>
+        <tr><td colspan="2">
+        <input type="submit" value="Send"/>
+        </td></tr>
+    </table>
+</form>
+</body>
+</html>
