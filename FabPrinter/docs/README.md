@@ -23,7 +23,7 @@ Please enter "Printer name" that was set in CUPS Manager. <br>
 
 <img src="https://raw.githubusercontent.com/ohwada/FabCam/master/FabPrinter/docs/fabprinter_main.png" width="300"/>
 
-### Excute
+### Send to Machine
 Usually display immediately "END", and the machine will be run. <br>
 If it is taking time to transfer data to the machine, display consecutive dots such as "..." <br>
 If the transfer fails, display the reason <br>

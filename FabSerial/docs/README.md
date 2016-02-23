@@ -23,7 +23,7 @@ If Serial Port is empty, connect the machine with USB cable, and refresh web bra
 
 <img src="https://raw.githubusercontent.com/ohwada/FabCam/master/FabSerial/docs/fabserial_main.png" width="300"/>
 
-### Excute
+### Send to Machine
 Usually display immediately "END", and the machine will be run. <br>
 If it is taking time to transfer data to the machine, display consecutive dots such as "..." <br>
 If the transfer fails, display the reason <br>
