@@ -3,21 +3,23 @@ FabCam Printer
 
 Web app to control the fab machine, such as Roland SRM series. <br>
 
+<img src="https://raw.githubusercontent.com/ohwada/FabCam/master/FabPrinter/docs/fabprinter_main.png" width="200"  />
+
 ### Requirements
 - OS: Linux, MacOSX, other UNIX clone <br>
 - CUPS (Common Unix Printing System) <br>
 - Python 2.7 <br>
-- [virtualenv](https://virtualenv.readthedocs.org/en/latest/)
+- [Virtualenv](https://virtualenv.readthedocs.org/en/latest/) <br>
 
 ### Install
 $ cd ~<br>
 $ git clone https://github.com/ohwada/FabCam.git <br>
 $ cd FabCam<br>
-$ virtualenv venv
-$ source venv/bin/activate
-(venv) $ cd FabPrinter
+$ virtualenv venv <br>
+$ source venv/bin/activate <br>
+(venv) $ cd FabPrinter <br>
 (venv) $ python setup.py install <br>
-$ deactivate
+$ deactivate <br>
 
 you can use service deamon <br>
 $ sudo sh init.sh <br>
@@ -34,7 +36,7 @@ Access using web browser. <br>
 http://localhost:8020 <br>
 
 more detail <br>
-https://github.com/ohwada/FabCam/tree/master/FabPrinter/docs/ <br/>
+https://github.com/ohwada/FabCam/tree/master/FabPrinter/docs/ <br>
 
 ### Compatible models
 - Milling: Roland SRM-20

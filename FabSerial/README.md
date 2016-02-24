@@ -3,20 +3,22 @@ FabCam Serial
 
 Web app to control the fab machine, such as Roland MDX series. <br>
 
+<img src="https://raw.githubusercontent.com/ohwada/FabCam/master/FabSerial/docs/fabserial_main.png" width="200"/>
+
 ### Requirements
 - OS: Linux, MacOSX, other UNIX clone <br>
 - Python 2.7 <br>
-- [virtualenv](https://virtualenv.readthedocs.org/en/latest/)
+- [Virtualenv](https://virtualenv.readthedocs.org/en/latest/) <br>
 
 ### Install
 $ cd ~<br>
 $ git clone https://github.com/ohwada/FabCam.git <br>
-$ cd FabCam<br>
-$ virtualenv venv
-$ source venv/bin/activate
-(venv) $ cd FabSerial
+$ cd FabCam <br>
+$ virtualenv venv <br>
+$ source venv/bin/activate <br>
+(venv) $ cd FabSerial <br>
 (venv) $ python setup.py install <br>
-$ deactivate
+$ deactivate <br>
 
 you can use service deamon <br>
 $ sudo sh init.sh <br>
@@ -33,7 +35,7 @@ Access using web browser. <br>
 http://localhost:8010 <br>
 
 more detail <br>
-https://github.com/ohwada/FabCam/tree/master/FabSerial/docs/ <br/>
+https://github.com/ohwada/FabCam/tree/master/FabSerial/docs/ <br>
 
 ### Compatible models
 - Milling: Roland MDX-15 (baudrate 9600)
