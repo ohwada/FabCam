@@ -15,7 +15,10 @@ Web app to control the fab machine, such as Roland SRM series. <br>
 $ cd ~<br>
 $ git clone https://github.com/ohwada/FabCam.git <br>
 $ cd FabCam<br>
+
 $ virtualenv venv <br>
+( You do not need to excute this command more than once, if you excuted this at once. ) <br>
+
 $ source venv/bin/activate <br>
 (venv) $ cd FabPrinter <br>
 (venv) $ python setup.py install <br>
