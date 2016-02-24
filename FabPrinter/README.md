@@ -6,7 +6,7 @@ Web app to control the fab machine, such as Roland SRM series. <br>
 <img src="https://raw.githubusercontent.com/ohwada/FabCam/master/FabPrinter/docs/fabprinter_main.png" width="200"  />
 
 ### Requirements
-- OS: Linux, MacOSX, other UNIX clone <br>
+- OS: Raspbian (Debian for Rapsberry Pi), other UNIX clone <br>
 - CUPS (Common Unix Printing System) <br>
 - Python 2.7 <br>
 - [Virtualenv](https://virtualenv.readthedocs.org/en/latest/) <br>
