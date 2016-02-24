@@ -1,7 +1,8 @@
-FabCam
+FabCam for Rapsberry Pi
 ===============
 
 FabCam is web app which control the fab machine.  <br>
+FabCam is available for Rapsberry Pi, other UNIX clone. <br>
 This repository includes two Python package. <br>
 
 ### FabSerial
